@@ -7,18 +7,67 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <style>
-        .container{
-            background-color: skyblue;
+        body{
+            box-sizing:border-box;
+        }
+        .container-fluid{
+            background-color: #F3E4CF;
+        }
+        .box1{
+            height:324px;
+            width: 200px;
+        }
+        .box2{ 
             height: 200px;
             width: 200px;
         }
+        .border1{
+           border: 2px solid #2a2a2a; 
+        }
+        .article{
+            height: 400px;
+            width: 100%;
+        }
+        .trivia{
+            height: 400px;
+            width: 100%;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <h1>H1</h1>
-            <h2>H2</h2>
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <herosection class="hero-sec p-0 d-sm-flex flex-sm-column align-items-sm-center order-md-4 col-md-4">
+                <div class="box1 mt-5 border1"></div>
+                <div class="box2 mt-5 border1"></div>
+                <div class="box2 mt-5 border1"></div>
+            </herosection>
+            <div class="suntop p-0 order-md-1 col-12">
+                <img src="images/sun.svg" alt="">
+            </div>
+            <section class="s1 row p-0 m-0 order-md-2 col-md-8">
+                <div class="textbar border1 col-sm-1 col-1 p-0">#</div>
+                <div class="col-sm-10 p-0 col-11">
+                    <div class="article border1"></div> 
+                    <div class="article border1"></div>
+                    <div class="article border1"></div>
+                </div>
+                <div class="textbar border1 col-sm-1 d-md-none p-0 ">#</div>
+                <div class="trivia border1">#Trivia</div>
+            </section>
+            <section class="s2 col p-0 m-0 order-md-5 row justify-content-center"> 
+                <div class="col-md-8">
+                    <img src="images/sun.svg" alt="">
+                </div>
+                <div class="d-flex flex-column align-items-center col-md-4 p-0">
+                    <div class="box2 border1 mt-5"></div>
+                    <div class="box2 border1 mt-5"></div>
+                    <div class="box2 border1 mt-5"></div>
+                </div>
+
+            </section>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
