@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=BioRhyme&display=swap" rel="stylesheet">
 
     <style>
+        /* :root{
+
+        } */
         body{
             /* background:url(images/1000-100-10-monochrome.png) ; */
             background:#F5E7D3;
             padding-left: 0.5em;
             padding-right:0.5em ;
+            font-family: 'Abril Fatface', cursive;
         }
-        h1, h2{
-            font-family: 'Gloock', serif;
+        h1{
+            font-size: calc(2rem + 2.5vw);
+        }
+        h2{
+            font-size: calc(1.375rem + 1.5vw);
         }
         p{
             font-family: 'BioRhyme', serif;
+            font-size: calc(0.875rem + 1vw);
         }
         .hero{
             display: flex;
@@ -29,13 +37,28 @@
             align-items: center;
             /* height: 200vh; */
         }
+        .hero h1{
+            position: absolute;
+        }
+        .hero-h1{
+            top: 40%;
+            left: -50%;
+        }
+        .hero-h2{
+            top: 40%;
+            left:50%;
+        }
+        .hero-h3{
+            top:50%;
+            left: -50%;
+        }
         .hero::before{
             content: "";
             background-image: url(images/hero-left.svg);
             background-repeat: no-repeat;
             background-position: top;
             position: absolute;
-            width: 8rem;
+            width: 8em;
             height: 80em;
             left: 10%;
             top: 15%;
@@ -46,19 +69,24 @@
             background-repeat: no-repeat;
             background-position: top;
             position: absolute;
-            width: 8rem;
+            width: 8em;
             height: 80em;
             right: 10%;
-            bottom: 0;
+            bottom: -40%;
         }
-        
         .box{
                 height: 325px;
                 width:33.333%;
         }
+        .box0{
+                height: auto;
+                width:33.333%;
+                position: relative;
+        }
         .box1{
                 height: aspect-ratio;
                 width: 33.333%;
+                position: relative;
         }
         .border{
             border: 1px solid #2a2a2a;
@@ -68,6 +96,7 @@
             display: flex;
             justify-content: center;
             position: relative;
+            margin-top: 3em;
         }
         .nav-dot{
             display: flex;
@@ -75,7 +104,7 @@
             align-items: center; 
         }
         .nav-name{
-            padding: 5px;
+            padding: 15px;
         }
         a, a:visited{
             text-decoration: none;
@@ -148,13 +177,10 @@
         }
         @media screen and (min-width:375px) {
             /* 網頁版 */
-            h1{font-size: 60px;}
+            /* h1{font-size: 60px;} */
             h2{font-size: 24px;}
             p{font-size: 16px};
-            .box{
-                height: 407px;
-                width: 393px;
-            }
+            
             .box2{
                 width: 80%;
                 height: 400px;
@@ -175,9 +201,7 @@
         }
         @media screen and (max-width:375px){
             /* 手機版 */
-            h1{font-size: 36px;}
-            h2{font-size: 16px;}
-            p{font-size: 10px;}
+            
 
             .box2{
                 width: 80%;
@@ -203,14 +227,20 @@
     <herosection class="hero s-border">
         <div class="box s-border"></div>
         <!-- 要不要用padding -->
-        <div class="box border">
-            <h1>Lorem ipsum dolor</h1>
+        <div class="box0 border box-t1">
+            <img src="images/sun.svg" alt="">
+            <h1 class="hero-h1">" <br>
+                Who's there...."</h1>
         </div>
-        <div class="box1 border">
-            <h1>Lorem ipsum dolor</h1>
+        <div class="box1 border box-t2">
+            <img src="images/sun.svg" alt="">
+            <h1 class="hero-h2">" <br>
+                There's a Reese's..."</h1>
         </div>
-        <div class="box1 border">
-            <h1>Lorem ipsum dolor</h1>
+        <div class="box1 border box-t3">
+            <img src="images/sun.svg" alt="">
+            <h1 class="hero-h3">" <br>
+                I See You..."</h1>
         </div>
         <div class="box s-border"></div>
         <!-- 要不要用padding -->
@@ -220,7 +250,8 @@
     <div class="s-border">
         <div><img src="images/sun.svg" alt=""></div>
         <div><img src="images/bike.svg" style="height: 100px;" alt=""></div>
-        <h1>" TO WONDER WITH THE MOON</h1>
+        <h1>"<br>
+             I'LL BE RIGHT HERE</h1>
     </div>
     <!-- header -->
     <header>
@@ -262,12 +293,15 @@
         <div class="s1-number">
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b1"></div>
             </div>
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b2"></div>
             </div>
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b3"></div>
             </div>
         </div>
         <div class="s1-scenes">
@@ -276,12 +310,15 @@
         <div class="s1-number">
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b4"></div>
             </div>
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b5"></div>
             </div>
             <div class="box1 border">
                 <img src="images/sun.svg" alt="">
+                <div class="s1-b s1-b6"></div>
             </div>
         </div>
     </section>
