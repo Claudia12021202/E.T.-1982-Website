@@ -31,14 +31,25 @@
         }
         .hero::before{
             content: "";
-            background-image: url(images/nav-star.svg);
+            background-image: url(images/hero-left.svg);
             background-repeat: no-repeat;
             background-position: top;
             position: absolute;
             width: 8rem;
-            height: 8rem;
-            left: 15%;
+            height: 80em;
+            left: 10%;
             top: 15%;
+        }
+        .hero::after{
+            content: "";
+            background-image: url(images/hero-right.svg);
+            background-repeat: no-repeat;
+            background-position: top;
+            position: absolute;
+            width: 8rem;
+            height: 80em;
+            right: 10%;
+            bottom: 0;
         }
         
         .box{
