@@ -6,12 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ET</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Gloock&display=swap" rel="stylesheet">
+
     <style>
+        body{
+            /* background:url(images/1000-100-10-monochrome.png) ; */
+            background:#F5E7D3;
+            padding-left: 0.5em;
+            padding-right:0.5em ;
+        }
+        h1, h2{
+            font-family: 'Gloock', serif;
+        }
+        p{
+            font-family: 'BioRhyme', serif;
+        }
         .hero{
             display: flex;
             flex-direction: column;
             align-items: center;
             /* height: 200vh; */
+        }
+        .hero::before{
+            content: "";
+            background-image: url(images/nav-star.svg);
+            background-repeat: no-repeat;
+            background-position: top;
+            position: absolute;
+            width: 8rem;
+            height: 8rem;
+            left: 15%;
+            top: 15%;
+        }
+        
+        .box{
+                height: 325px;
+                width:33.333%;
+        }
+        .box1{
+                height: aspect-ratio;
+                width: 33.333%;
         }
         .border{
             border: 1px solid #2a2a2a;
@@ -19,24 +55,85 @@
         nav{
             border-top: 1px solid #2a2a2a;
             display: flex;
-            justify-content: space-between;
-
+            justify-content: center;
+            position: relative;
+        }
+        .nav-dot{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .nav-name{
+            padding: 5px;
         }
         a, a:visited{
             text-decoration: none;
             color: #2a2a2a;
         }
         a:hover, a:active{
-            text-decoration:overline;
+            text-decoration:underline;   
         }
         .s1-number{
             display: flex;
+            width: 80%;
+            height: auto;
         }
         .border_bttom{
             border-bottom: 1px solid #2a2a2a;
         }
         .footer{
             height: 50px;
+        }
+        .s-border{
+            border: 1px solid skyblue;
+        }
+        .s1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .s1-scenes{
+            width: 80%;
+            height: 500px;
+            border: 1px solid pink;
+        }
+        .s2-li{
+            /* text-decoration: underline;
+            text-underline-offset:auto ; */
+            margin-top: 5em;
+            position: relative;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .s2-h1-1{
+                position: absolute;
+                top: -0.85em;
+                left: 10%;
+        }
+        .s2-h1-2{
+                position: absolute;
+                top: -0.85em;
+                left: 50%;
+        }
+        .s2-h1-3{
+                position: absolute;
+                top: -0.85em;
+                left: 20%;
+        }
+        .s2-h1-4{
+                position: absolute;
+                top: -0.85em;
+                left: 55%;
+        }        
+        .s2-h1-5{
+                position: absolute;
+                top: -0.85em;
+                left: 30%;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         @media screen and (min-width:375px) {
             /* 網頁版 */
@@ -47,39 +144,54 @@
                 height: 407px;
                 width: 393px;
             }
-            .box1{
-                height: 393px;
-                width: 393px;
-            }
             .box2{
-                width: 100%;
+                width: 80%;
                 height: 400px;
             }
-
+            .circle{
+                height: 10px;
+                width: 10px;  
+                position: absolute;
+                top: -5px;
+            } 
+            
+            .circle-inner{
+                cx:5px;
+                cy:5px;
+                r:5px;
+                background: #2a2a2a;
+            }
         }
         @media screen and (max-width:375px){
             /* 手機版 */
             h1{font-size: 36px;}
             h2{font-size: 16px;}
-            p{font-size: 12px;}
-            .box{
-                height: 325px;
-                width: 200px;
-            }
-            .box1{
-                height: 200px;
-                width: 200px;
-            }
+            p{font-size: 10px;}
+
             .box2{
-                width: 100%;
+                width: 80%;
                 height: 200px;
+            }
+            .circle{
+                height: 5px;
+                width: 5px;  
+                position: absolute;
+                top: -2.5px;  
+            }
+            .circle-inner{
+                cx:2.5px;
+                cy:2.5px;
+                r:2.5px;
+                background: #2a2a2a;
             }
         }
     </style>
 </head>
 <body>
     <!-- 三格圖 -->
-    <herosection class="hero">
+    <herosection class="hero s-border">
+        <div class="box s-border"></div>
+        <!-- 要不要用padding -->
         <div class="box border">
             <h1>Lorem ipsum dolor</h1>
         </div>
@@ -89,61 +201,107 @@
         <div class="box1 border">
             <h1>Lorem ipsum dolor</h1>
         </div>
+        <div class="box s-border"></div>
+        <!-- 要不要用padding -->
 
     </herosection>
     <!-- 太陽＆腳踏車 -->
-    <div>
+    <div class="s-border">
         <div><img src="images/sun.svg" alt=""></div>
         <div><img src="images/bike.svg" style="height: 100px;" alt=""></div>
-        <h1>Lorem ipsum dolor</h1>
+        <h1>" TO WONDER WITH THE MOON</h1>
     </div>
     <!-- header -->
     <header>
-        <nav>
-           <a href=""><p>Scenes</p> </a>
-           <a href=""><p>Trivia</p> </a>
-           <a href=""><p>Dress-Code</p> </a> 
+        <nav class=""> 
+            <a href="">
+                <div class="nav-dot">
+                    <svg class="circle">
+                        <circle class="circle-inner"/>
+                    </svg>
+                    <!-- <svg clip-path="polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" fill="black">
+                     </svg> -->
+                    <!-- <img src="images/nav-star.svg" alt=""> -->
+                    <h2 class="nav-name">Scenes</h2> 
+                </div>
+            </a>
+            <a href="">
+                <div class="nav-dot">
+                    <svg class="circle" height="10" width="10">
+                        <circle class="circle-inner"/>
+                    </svg>
+                    <!-- <img src="images/nav-star.svg" alt=""> -->
+                    <h2 class="nav-name">Trivias</h2> 
+                </div>
+            </a>
+            <a href="">
+                <div class="nav-dot">
+                    <svg class="circle" height="10" width="10">
+                        <circle class="circle-inner"/>
+                    </svg>
+                    <!-- <img src="images/nav-star.svg" alt=""> -->
+                    <h2 class="nav-name">Dress-Code</h2> 
+                </div>
+            </a>
         </nav>
     </header>
     <!-- s1-劇情介紹 -->
-    <section class="s1">
+    <br>
+    <section class="s1 s-border">
         <div class="s1-number">
-            <div class="box1 border"></div>
-            <div class="box1 border"></div>
-            <div class="box1 border"></div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
         </div>
         <div class="s1-scenes">
-            <div class="box2 border"></div>
+            <div class=" border"></div>
         </div>
         <div class="s1-number">
-            <div class="box1 border"></div>
-            <div class="box1 border"></div>
-            <div class="box1 border"></div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
+            <div class="box1 border">
+                <img src="images/sun.svg" alt="">
+            </div>
         </div>
     </section>
     <br>
     <!-- s2-Trivia -->
-    <section class="s2">
-        <h2 class="border">5 Facts You Don't Know</h2>
-        <h1 class="border_bttom">NAME</h1>
-        <h1 class="border_bttom">PLANT</h1>
-        <h1 class="border_bttom">REESE'S</h1>
-        <h1 class="border_bttom">ROBERT</h1>
-        <h1 class="border_bttom">SEQUEL</h1>
+    <section class="s2 s-border">
+        <h1 class="">5 Facts You Don't Know</h1>
+        <ul class="">
+            <li class="s2-li"><h1 class="s2-h1-1">NAME</h1></li>
+            <li class="s2-li"><h1 class="s2-h1-2">PLANT</h1></li>
+            <li class="s2-li"><h1 class="s2-h1-3">REESE'S</h1></li>
+            <li class="s2-li"><h1 class="s2-h1-4">ROBERT</h1></li>
+            <li class="s2-li"><h1 class="s2-h1-5">SEQUEL</h1></li>
+        </ul>
+
     </section>
     <!-- s3-Dress-Code -->
-    <section class="s3">
+    <section class="s3 s-border">
       <h1>1982</h1> 
+      <div class="box1 border"><img src="images/sun.svg" alt=""></div>
       <h1>" TO WONDER WITH THE MOON</h1> 
-      <div class="box2 border">
+      <div class="border">
+        #BEGOOD!#BEGOOD!#BEGOOD!
       </div>
     </section>
     <!-- Footer -->
-    <Footer>
-        <div class="footer border"></div>
-        <div class="footer border"></div>
-        <div class="footer border"></div>
-    </Footer>
+    <footer class="s-border">
+        <div class="footer border box1" style="width:20%;">123</div>
+        <div class="footer border box1" style="width: 15%;">456</div>
+        <div class="footer border box1" style="width: 10%;">789</div>
+    </footer>
 
 </body>
 </html>
