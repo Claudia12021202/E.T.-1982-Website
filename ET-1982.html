@@ -14,8 +14,8 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-    crossorigin="anonymous"
-/>
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -143,7 +143,7 @@
             /* margin-top: 2em; */
             display: flex;
             justify-content: center;
-            background-color:#fdbe58 ;
+            background-color:#fdbe587b ;
         }
         .nav-dot{
             display: flex;
@@ -280,6 +280,7 @@
         /* } */
 
     /* S2區 */
+            
         .s2-content{
             width: 100%;
         }
@@ -352,49 +353,25 @@
             /* 可以做box-shadow */
         }
     /* S3區 */
-        .s3{
-            width: 100%;
-            margin: auto;
-        }
-        .s3-h1-1{
-            text-align: right;
-        }
-        .slider-window {
-            max-width: 800px;
-            height: 450px;
-            overflow: hidden;
-            background-image:url(images/bg-bg.gif) ;
-            background-size:cover;
-        }
-        .img-wrap {
-            width: 500%;
-            left: 0px;
-            transition: 0.5s;
-        }
-        li img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* object-position: 50% bottom; */
-        }
         .slider-dots {
             bottom: 0;
         }
         .slider-dots li {
-            width: 40px;
-            height: 10px;
+            width: 20px;
+            height: 20px;
             margin: 0 4px;
-            border: 1px solid #fff;
+            border-radius: 50%;
+            border: 1px solid var(--blue);
         }
         .slider-dots li:first-child{
-            background-color: #fff;
+            background-color:var(--blue);
         }
         .prevPageArea,
         .nextPageArea {
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 8%;
+            width: 10%;
             /* background-color: #ccc; */
             display: flex;
             justify-content: center;
@@ -402,26 +379,46 @@
             cursor: pointer;
         }
         .prevPageArea {
-            left: 0;
+            left: 0%;
         }
         .nextPageArea {
-            right: 0;
+            right: 0%;
         }
         .btnPrev,
         .btnNext {
-            background: rgb(255, 221, 148);
-            border: 1px solid rgb(78, 78, 0);
-            border-radius: 20%;
+            background: var(--white);
+            border: 2px solid rgb(78, 78, 0);
+            border-radius: 30%;
             aspect-ratio: 1/1;
             width: 60%;
         }
     /* Footer區 */
         footer{
-            height: 60vh;
-            margin-top: 5em;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-bottom: 3em;
+            position: relative;
+        }
+        .f-a-1 i{
+                color: #FF6044;
+        }
+        .f-a-2 i{
+                color:var(--blue);
+        }
+        .f-a-3 i{
+                color:var(--yellow);
+        }
+        footer::before{
+            content: "";
+            background: url(images/bike-new.svg) center center no-repeat;
+            background-size: cover;
+            height: 6em;
+            width: 6em;
+            position: absolute;
+            top:35%;
+            left: 20%;
+
         }
         @media screen and (min-width:375px) {
             /* 網頁版 */
@@ -480,9 +477,60 @@
             padding:2rem;
             }
             .s2{
-            width: 80%;
+            width: 50%;
             margin: auto;
             }
+            .s3{
+            width: 70%;
+            margin: auto;
+            }
+            .s3-h1-1{
+                text-align: right;
+            }
+            .slider-window {
+                max-width: 800px;
+                height: 450px;
+                overflow: hidden;
+                background-image:url(images/bg-bg.gif) ;
+                background-size:cover;
+            }
+            .img-wrap {
+                width: 500%;
+                left: 0px;
+                transition: 0.5s;
+            }
+            li img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* object-position: 50% bottom; */
+            }
+            footer{
+                height: 60vh;
+                margin-top: 5em;
+            }
+            .footer-container{
+            width: 70%;
+            margin: auto;
+            }
+            .footer-box{
+                margin-top: 2em;
+            }
+            .f-b1{
+                width: 30%;
+            }
+            .f-b2{
+                width: 20%;
+            }
+            .f-b3{
+                width: 10%;
+            }
+            footer i{
+                margin-top: 20px;
+                margin-right: 10px;
+                font-size: 40px;
+            }
+
         }
         @media screen and (max-width:375px){
             /* 手機版 */
@@ -543,6 +591,58 @@
             }
             .s2{
                 padding-top: 8em;
+            }
+            .s3{
+                width: 100%;
+                margin: auto;
+            }
+            .s3-h1-1{
+                text-align: right;
+            }
+            .slider-window {
+                max-width: 800px;
+                height: 450px;
+                overflow: hidden;
+                background-image:url(images/bg-bg.gif);
+                background-position:50% 0%;
+                background-size:cover;
+            }
+            .img-wrap {
+                width: 1000%;
+                /* %數調整 */
+                left: 0px;
+                transition: 1s;
+            }
+            li img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* object-position: 50% bottom; */
+            }
+            footer{
+                height: 60vh;
+                margin-top: 5em;
+            }
+            .footer-container{
+            width: 100%;
+            margin: auto;
+            }
+            .footer-box{
+                margin-top: 2em;
+            }
+            .f-b1{
+                width: 80%;
+            }
+            .f-b2{
+                width: 60%;
+            }
+            .f-b3{
+                width: 40%;
+            }
+            footer i{
+                margin-top: 20px;
+                margin-right: 10px;
+                font-size: 30px;
             }
           
         }
@@ -642,11 +742,11 @@
         </div>
         <div class="s1-scenes">
                 <img src="images/s1-middle-1.jpg" style="opacity:1" alt="">
-                <img src="images/s1-middle-2.webp" alt="">
-                <img src="images/s1-middle-3.webp" alt="">
-                <img src="images/s1-middle-4.webp" alt="">
+                <img src="images/s1-middle-2.jpg" alt="">
+                <img src="images/s1-middle-3.jpg" alt="">
+                <img src="images/s1-middle-4.png" alt="">
                 <img src="images/s1-middle-5.webp" alt="">
-                <img src="images/s1-middle-1.jpg" alt="">
+                <img src="images/s1-middle-6.jpg" alt="">
         </div>
         <div class="s1-number">
             <div class="box1 box002"id="s1-num1" val="3">
@@ -726,10 +826,10 @@
         </ul>
 
         <div class="prevPageArea">
-            <button class="btnPrev">&lt;</button>
+            <button class="btnPrev"><img src="images/finger-left.svg" alt=""></button>
         </div>
         <div class="nextPageArea">
-            <button class="btnNext">&gt;</button>
+            <button class="btnNext"><img src="images/finger1.svg" alt=""></button>
         </div>
     </div>
       <!-- <div class="box1 border"><img src="images/sun.svg" alt=""></div> -->
@@ -740,17 +840,28 @@
     </section>
     <!-- Footer -->
     <footer class="s-border">
-        <div class="footer border box1" style="width:20%;">
-            <img src="images/footer-1.svg" alt="">
+        <div class="footer-container">
+            <div class="footer-box f-b1">
+                <img src="images/footer-1.svg" alt="">
+            </div>
+                <div class="footer-box f-b2">
+                <img src="images/footer-2.svg" alt="">
+            </div>
+
+            <div class="footer-box f-b3">
+                <img src="images/footer-3.svg" alt="">
+            </div>
+            <a href="" class="f-a-1">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="f-a-2">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" class="f-a-3">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
         </div>
-        Bike
-        <div class="footer border box1" style="width: 15%;">
-            <img src="images/footer-2.svg" alt="">
-        </div>
-        <div class="footer border box1" style="width: 10%;">
-            <img src="images/footer-3.svg" alt="">
-        </div>
-        <span>Copyright &#169; 2023 Claudia Liao. All rights reserved.</span>
+        <span>Copyright &#169; 2023 Yueh-Ju Liao. All rights reserved.</span>
     </footer>
 
 
@@ -813,6 +924,7 @@
             $('.s1-scenes img').eq(countVal).css('opacity','1').siblings().css('opacity','0')
             $('.s1-p-p').eq(countVal).css('opacity','1').siblings().css('opacity','0')
             typeWriterAni(e);
+            // $('.box1:hover').css('cousor','pointer')
         })
     // S1打字機效果
         function typeWriterAni(e) {
@@ -880,7 +992,7 @@
             function MovePage(){
                 const Move=i*-800
                 $('.img-wrap').css('transform',`translateX(${Move}px)`)
-                $('.slider-dots li').eq(i).css('background','white').siblings().css('background','transparent')
+                $('.slider-dots li').eq(i).css('background','#54adaf').siblings().css('background','transparent')
 
             }
         
