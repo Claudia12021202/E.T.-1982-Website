@@ -55,7 +55,7 @@
 }
 @keyframes lineBike{
     0%{
-        bottom:0%;
+        bottom:20%;
         left:0%;
         opacity: 1;
     }
