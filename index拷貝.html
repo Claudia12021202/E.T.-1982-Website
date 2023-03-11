@@ -32,27 +32,25 @@
             --brown:#70544A;
         }
         body{
-            /* background:url(images/1000-100-10-monochrome.png) ; */
+            margin: auto;
             background:#F5E7D3;
-            padding-left:1em;
-            padding-right:1em ;
-            /* font-family: 'Noto Sans TC', sans-serif; */
+            /* padding-left:1em;
+            padding-right:1em ; */
             font-family: 'Abril Fatface', cursive;
-            /* 超出範圍要隱藏 */
-            /* overflow: hidden; */
         }
         h1{ font-size: calc(1.375rem + 1.5vw)}
         h2{ font-size: calc(0.875rem + 1vw);}
         p{  font-family: 'Noto Sans TC', sans-serif;
             font-size: calc(0.5rem + 0.25vw);}
-        /* .s-border{
+        .s-border{
             border: 1px solid skyblue;
-        } */
-        /* .border{
+        } 
+        .border{
             border: 1px solid #2a2a2a;
-        } */
+        }
     /* HERO區 */
         .hero{
+            width: 80%;
             position:relative;
             display: flex;
             flex-direction: column;
@@ -169,10 +167,10 @@
 
     /* NAV區 */
         header{
+            width: 50%;
             padding-top: 0.5em;
             position: sticky;
             z-index:100000;
-            width: 50%;
             margin: auto;
             height: aspect-ratio;
             top: 0;
@@ -234,38 +232,9 @@
         .box-f1 .countdownB{
             opacity: 1;
         }
-        /* .s1-num1{
-            position: relative;
-            cursor: pointer;
-            overflow: hidden;
-        } */
-        /* .box1:hover::before{
-            content: "";
-            background: url(images/count-1.jpg) center center no-repeat;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            transition: 0.5;
-        } */
         .box1:hover .countdownB{
             opacity: 1;
         }
-        /* .s1-num2{
-            position: relative;
-            cursor: pointer;
-        } */
-        /* .s1-num2:hover::before{
-            content: "";
-            background: url(images/count-2.jpg) center center no-repeat;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            transition: 0.5;
-        } */
         .s1-scenes{
             width:80%;
             /* height: 100%; */
@@ -298,7 +267,6 @@
         }
 
     /* S2區 */
-            
         .s2-content{
             width: 100%;
         }
@@ -440,8 +408,9 @@
             top:35%;
             left: 20%;
         }
-        @media screen and (min-width:375px) {
-            /* 網頁版 */
+        @media screen and (min-width:767px) {
+    /* 網頁版 */
+        /* HERO */
             .box-candy img{
                 width: 40%;
             }
@@ -578,20 +547,26 @@
             }
 
         }
-        @media screen and (max-width:375px){
-            /* 手機版 */
+        @media screen and (max-width:767.98px){
+    /* 手機版 */
+            body{
+                padding-left:1em;
+                padding-right:1em ; 
+            }
+        /* HERO */
             .box-candy img{
                 width: 50%;
             }
             header{
-                width: 100%;
+                display: none;
             }
+            
             .bike-animation{
                 height: 5em;
                 width: 5em;
             }
             .hero{
-                width: 100%;;
+                width: 80%;;
                 margin: auto;
             }
             .circle{
@@ -657,19 +632,20 @@
                 padding-top: 2em;
             }
             .slider-window {
-                max-width: 400px;
-                height: 200px;
+                max-width: 800px;
+                height: 450px;
                 overflow: hidden;
                 background-image:url(images/dress-bg-new.png);
                 background-position:50% ;
                 background-size:cover;
             }
             .img-wrap {
-                width: 300%;
+                position: relative;
+                width: 600%;
                 /* %數調整 */
                 left: 0px;
                 transition: 1s;
-                margin-top: 8px;
+                left: -50%;
             }
             li img {
                 width: 100%;
@@ -870,7 +846,7 @@
     <!-- s3-Dress-Code -->
     <section class="s3 s-border" id="s3">
       <h1 class="s3-h1-1 s3-h1">1982</h1> 
-      <div class="slider-window mx-auto position-relative mt-5">
+      <div class="slider-window mx-auto position-relative">
         <ul class="list-unstyled d-flex img-wrap position-absolute">
             <li>
                 <img src="images/dress-bg-1.png" alt="" />
@@ -1052,9 +1028,9 @@
             
             function MovePage(){
                 let Move=i*-800
-                if (window.innerWidth< 375) {
-                    Move = i * -327.5; 
-                }
+                // if (window.innerWidth< 767.98) {
+                //     Move = i * -800; 
+                // }
                 $('.img-wrap').css('transform',`translateX(${Move}px)`)
                 $('.slider-dots li').eq(i).css('background','#F5E7D3').siblings().css('background','transparent')
 
