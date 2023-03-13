@@ -42,9 +42,9 @@
         h2{ font-size: calc(0.875rem + 1vw);}
         p{  font-family: 'Noto Sans TC', sans-serif;
             font-size: calc(0.5rem + 0.25vw);}
-        .s-border{
+        /* .s-border{
             border: 1px solid skyblue;
-        } 
+        }  */
         .border{
             border: 1px solid #2a2a2a;
         }
@@ -375,10 +375,11 @@
         .btnPrev,
         .btnNext {
             background: var(--white);
-            border: 2px solid rgb(78, 78, 0);
-            border-radius: 30%;
+            /* border: 2px solid rgb(78, 78, 0); */
+            border-radius: 50%;
             aspect-ratio: 1/1;
             width: 60%;
+            background: url(images/candy-orange.svg);
         }
 
     /* Footer區 */
@@ -504,9 +505,12 @@
                 overflow: hidden;
                 background-image:url(images/dress-bg-new.png) ;
                 background-size:cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: relative;
             }
             .img-wrap {
-                /* height: 450px; */
+                height: 450px;
                 width: 300%;
                 left: 0px;
                 transition: 0.5s;
@@ -629,23 +633,23 @@
             }
             .s3-h1{
                 font-size: 2em;
-                padding-top: 2em;
             }
             .slider-window {
                 max-width: 800px;
                 height: 450px;
                 overflow: hidden;
-                background-image:url(images/dress-bg-new.png);
-                background-position:50% ;
+                background-image:url(images/dress-bg-new.png) ;
                 background-size:cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: relative;
             }
             .img-wrap {
-                position: relative;
-                width: 600%;
-                /* %數調整 */
+                height: 450px;
+                width: 300%;
                 left: 0px;
-                transition: 1s;
-                left: -50%;
+                transition: 0.5s;
+                margin-top: -1px;
             }
             li img {
                 width: 100%;
@@ -654,6 +658,8 @@
                 /* object-position: 50% bottom; */
             }
             footer{
+                width: 90%;
+                margin: auto;
                 height: 60vh;
                 margin-top: 5em;
             }
@@ -847,7 +853,7 @@
     <section class="s3 s-border" id="s3">
       <h1 class="s3-h1-1 s3-h1">1982</h1> 
       <div class="slider-window mx-auto position-relative">
-        <ul class="list-unstyled d-flex img-wrap position-absolute">
+        <ul class="list-unstyled d-flex img-wrap position-absolute m-0">
             <li>
                 <img src="images/dress-bg-1.png" alt="" />
             </li>
@@ -868,10 +874,10 @@
         </ul>
 
         <div class="prevPageArea">
-            <button class="btnPrev"><img src="images/finger-left.svg" alt=""></button>
+            <button class="btnPrev"></button>
         </div>
         <div class="nextPageArea">
-            <button class="btnNext"><img src="images/finger1.svg" alt=""></button>
+            <button class="btnNext"></button>
         </div>
     </div>
       <!-- <div class="box1 border"><img src="images/sun.svg" alt=""></div> -->
@@ -900,7 +906,7 @@
                 <i class="fa-solid fa-envelope"></i>
             </a>
         </div>
-        <p>Copyright &#169; 2023 Yueh-Ju Liao. All rights reserved.</>
+        <p>Copyright &#169; 2023 Yueh-Ju Liao. All rights reserved.</p>
     </footer>
 
 
@@ -1027,10 +1033,8 @@
             })
             
             function MovePage(){
-                let Move=i*-800
-                // if (window.innerWidth< 767.98) {
-                //     Move = i * -800; 
-                // }
+                let Move=i*-$('.slider-window').width();
+
                 $('.img-wrap').css('transform',`translateX(${Move}px)`)
                 $('.slider-dots li').eq(i).css('background','#F5E7D3').siblings().css('background','transparent')
 
