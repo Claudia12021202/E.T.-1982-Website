@@ -503,7 +503,9 @@
                 height: 450px;
                 overflow: hidden;
                 background-image:url(images/dress-bg-new.png) ;
-                background-size:cover;
+                background-size:contain;
+                background-position: center center;
+                background-repeat: no-repeat;
             }
             .img-wrap {
                 /* height: 450px; */
@@ -846,8 +848,8 @@
     <!-- s3-Dress-Code -->
     <section class="s3 s-border" id="s3">
       <h1 class="s3-h1-1 s3-h1">1982</h1> 
-      <div class="slider-window mx-auto position-relative">
-        <ul class="list-unstyled d-flex img-wrap position-absolute">
+      <div class="slider-window mx-auto position-relative d-flex align-items-center">
+        <ul class="list-unstyled d-flex img-wrap position-absolute m-0">
             <li>
                 <img src="images/dress-bg-1.png" alt="" />
             </li>
@@ -1027,7 +1029,9 @@
             })
             
             function MovePage(){
-                let Move=i*-800
+                
+                let Move=i*-$('.slider-window').width()
+                console.log($('.slider-window').width())
                 // if (window.innerWidth< 767.98) {
                 //     Move = i * -800; 
                 // }
