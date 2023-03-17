@@ -37,14 +37,16 @@
             /* padding-left:1em;
             padding-right:1em ; */
             font-family: 'Abril Fatface', cursive;
+            /* background-size: 100% 100%,47px 53px,41px 33px,36px 12px,20px 36px,33px 42px,73px 95px,93px,75px,83px 45px,97px 95px,53px 65px,97px 95px,53px 130px,57px 67px,97px 99px,63px 110px,107px 150px,79px,100% 100%;
+            background-image: -webkit-radial-gradient(50% 50%,circle,rgba(0,0,0,.1) 40%, rgba(0,0,0,.7) 150%),-webkit-radial-gradient(30% 30%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(10% 10%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(15% 60%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(5% 22%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(50% 73%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(30% 30%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(50% 73%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(30% 60%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(60% 53%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(90% 90%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(28% 18%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(40% 70%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(30% 60%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(60% 53%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(90% 90%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),-webkit-radial-gradient(28% 18%,circle,rgba(0,0,0,.1) 1px, rgba(0,0,0,0) 2px),-webkit-radial-gradient(40% 70%,circle,rgba(0,0,0,.1) 2px, rgba(0,0,0,0) 1px),linear-gradient(-135deg,#F5E7D3 0%, #F5E7D3 100%); */
         }
         h1{ font-size: calc(1.375rem + 1.5vw)}
         h2{ font-size: calc(0.875rem + 1vw);}
         p{  font-family: 'Noto Sans TC', sans-serif;
             font-size: calc(0.5rem + 0.25vw);}
-        /* .s-border{
+        .s-border{
             border: 1px solid skyblue;
-        }  */
+        } 
         .border{
             border: 1px solid #2a2a2a;
         }
@@ -136,7 +138,7 @@
       
         .bike-animation{
             position: absolute;
-            height: 10em;
+            height: auto;
             width: 10em;
             bottom: 0;
             left:0;
@@ -449,6 +451,7 @@
                 /* margin-bottom: 10em;  */
             }
             .s1-1{
+                padding-top: 10em;
                 width: 80%;
                 margin: auto;
             }
@@ -478,9 +481,14 @@
                 padding:2rem;
             }
             .s2{
-                width: 50%;
+                width:80%;
                 margin: auto;
                 padding-top: 10em;
+            }
+            .s2-h1{
+                background:var(--orange);
+                /* opacity: 0.5; */
+                color: var(--white);
             }
             .s2 p{
                 padding: 5px;
@@ -491,13 +499,14 @@
             .s3{
                 width: 50%;
                 margin: auto;
+                margin-top: 10em;
             }
             .s3-h1-1{
                 text-align: right;
             }
             .s3-h1{
                 font-size: 5em;
-                padding-top: 2em;
+                /* padding-top: 2em; */
             }
             .slider-window {
                 max-width: 800px;
@@ -524,8 +533,7 @@
             }
             footer{
                 width: 50%;
-                height: 60vh;
-                margin-top: 2em;
+                padding-top: 10em;
                 margin: auto;
             }
             .footer-container{
@@ -566,7 +574,7 @@
             }
             
             .bike-animation{
-                height: 5em;
+                height: auto;
                 width: 5em;
             }
             .hero{
@@ -624,6 +632,11 @@
                 padding-top: 8em;
                 margin-top: 2rem;
             } */
+            .s2-h1{
+                background:var(--orange);
+                /* opacity: 0.5; */
+                color:var(--white);
+            }
             .s3{
                 width: 100%;
                 margin: auto;
@@ -724,7 +737,7 @@
             <div class="half-round first"></div>
         </div> -->
         <img class="bike-animation" src="images/bike-new.svg"  alt="">
-        <h1 class="mt-6 pt-5"><br>
+        <h1><br>
              I'LL BE RIGHT HERE</h1>
     </div>
     <!-- header -->
@@ -817,37 +830,39 @@
     </section>
     <br>
     <!-- s2-Trivia -->
-    <section class="s2 s-border" id="s2">
-        <h1 class="">" <br>
-            5 Facts You Don't Know</h1>
-        <ul class="list-unstyled">
-            <li class="s2-li s2-li-color1">
-                <h1 class="s2-h1-1">NAME</h1>
-                <div class="s2-content s2-c1">
-                    <p>導演(Steven Allan Spielberg)於1982年公開電影刪減片段及續集初稿，不僅可以觀看許多特別的片段以外，更可以發現續集劇本中發現許多E.T.真實姓名為'Zerk'。</p>
-                </div>
-            <li class="s2-li s2-li-color2">
-                <h1 class="s2-h1-2">PLANT</h1>
-                <div class="s2-content s2-c1">
-                    <p>E.T.綠色星球 (Green Planet) 的植物學家。他會至各個星球搜集植物樣本，Ｅ.T.也因此在電影第一幕時在加利福尼亞州的樹林裡搜集植物樣本，但因政府特務突然出現，導致Ｅ.T.沒能趕上飛船。</p></div>
-            </li>
-            <li class="s2-li s2-li-color3">
-                <h1 class="s2-h1-3">40TH's</h1>
-                <div class="s2-content s2-c1"><p>電影迎來四十週年，許多店家也紛紛推出聯名商品，雖然事隔多年，但說到外星人相關電影不外乎會提到‘E.T.'，可見Ｅ.T.這部電影對電影影響力非常遠大。
-                </p></div>
-            </li>
-            <li class="s2-li s2-li-color2">
-                <h1 class="s2-h1-4">REESE</h1>
-                <div class="s2-content s2-c1"><p>當初導演馬上邀請M&M’s參與電影。沒想到M&M’s覺得E.T.長得太醜，小朋友一定會被嚇壞，所以毫不猶豫地拒絕了。
-                    而最後“Reese's Pieces”更是在票房開賣兩週就翻了三倍之多的銷售量;M&M’s一定後悔自己做出的決定。
-                </p></div>
-            </li>
-            <li class="s2-li s2-li-color1">
-                <h1 class="s2-h1-5">SEQUEL?!</h1>
-                <div class="s2-content s2-c1"><p>導演(Steven Allan Spielberg)於1982年編寫了一部續集的構思方案，標題為《E.T. II：夜間恐懼》，Eliot被邪惡的外星人綁架，試圖聯絡E.T.求助。不過導演決定不拍攝續集，覺得這樣的作品除了破壞原作的童真外一無是處。</p></div>
-            </li>
-        </ul>
-
+    <section class="s2 s-border container-fluid" id="s2">
+        <div class="row">
+            <h1 class="col-md-6 s2-h1 m-0">" <br>
+                5 Facts You Don't Know</h1>
+            <!-- 滑下去變色 -->
+            <ul class="list-unstyled col-md-6 s-border">
+                <li class="s2-li s2-li-color1">
+                    <h1 class="s2-h1-1">NAME</h1>
+                    <div class="s2-content s2-c1">
+                        <p>導演(Steven Allan Spielberg)於1982年公開電影刪減片段及續集初稿，不僅可以觀看許多特別的片段以外，更可以發現續集劇本中發現許多E.T.真實姓名為'Zerk'。</p>
+                    </div>
+                <li class="s2-li s2-li-color2">
+                    <h1 class="s2-h1-2">PLANT</h1>
+                    <div class="s2-content s2-c1">
+                        <p>E.T.綠色星球 (Green Planet) 的植物學家。他會至各個星球搜集植物樣本，Ｅ.T.也因此在電影第一幕時在加利福尼亞州的樹林裡搜集植物樣本，但因政府特務突然出現，導致Ｅ.T.沒能趕上飛船。</p></div>
+                </li>
+                <li class="s2-li s2-li-color3">
+                    <h1 class="s2-h1-3">40TH's</h1>
+                    <div class="s2-content s2-c1"><p>電影迎來四十週年，許多店家也紛紛推出聯名商品，雖然事隔多年，但說到外星人相關電影不外乎會提到‘E.T.'，可見Ｅ.T.這部電影對電影影響力非常遠大。
+                    </p></div>
+                </li>
+                <li class="s2-li s2-li-color2">
+                    <h1 class="s2-h1-4">REESE</h1>
+                    <div class="s2-content s2-c1"><p>當初導演馬上邀請M&M’s參與電影。沒想到M&M’s覺得E.T.長得太醜，小朋友一定會被嚇壞，所以毫不猶豫地拒絕了。
+                        而最後“Reese's Pieces”更是在票房開賣兩週就翻了三倍之多的銷售量;M&M’s一定後悔自己做出的決定。
+                    </p></div>
+                </li>
+                <li class="s2-li s2-li-color1">
+                    <h1 class="s2-h1-5">SEQUEL?!</h1>
+                    <div class="s2-content s2-c1"><p>導演(Steven Allan Spielberg)於1982年編寫了一部續集的構思方案，標題為《E.T. II：夜間恐懼》，Eliot被邪惡的外星人綁架，試圖聯絡E.T.求助。不過導演決定不拍攝續集，覺得這樣的作品除了破壞原作的童真外一無是處。</p></div>
+                </li>
+            </ul>
+        </div>
     </section>
     <!-- s3-Dress-Code -->
     <section class="s3 s-border" id="s3">
