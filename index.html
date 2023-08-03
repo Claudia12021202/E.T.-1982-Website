@@ -249,7 +249,7 @@
             transition: 1s;
             /* float: left; */
         }
-        .show{
+        .s1-BoxRight.show{
             opacity: 1;
             transform: translate(125%,0);
         }
@@ -707,7 +707,7 @@
             footer{
                 width: 90%;
                 margin: auto;
-                height: 60vh;
+                /* height: 60vh; */
                 margin-top: 5em;
             }
             .footer-container{
@@ -727,7 +727,7 @@
                 width: 40%;
             }
             footer i{
-                margin-top: 20px;
+                 margin-top: 20px;
                 margin-right: 10px;
                 font-size: 30px;
             }
@@ -1110,18 +1110,6 @@
             $(a.target).css('opacity','1')
             // console.log($(a.target).css('opacity','1').parent().parent().parent().children().even().children().children().odd()..css('opacity','0'));
         })
-
-    // S1圖片點擊
-        $('.box1').click(function(e){
-            console.log('val=',$(e.target).parent().attr('val'));
-            const countVal=$(e.target).parent().attr('val');
-            // console.log('new src',$('.s1-scenes img').eq(countVal).attr('src')) 是否有抓到新的img
-
-            $('.s1-scenes img').eq(countVal).css('opacity','1').siblings().css('opacity','0')
-            $('.s1-p-p').eq(countVal).css('opacity','1').siblings().css('opacity','0')
-            typeWriterAni(e);
-            // $('.box1:hover').css('cousor','pointer')
-        })
     // S1打字機效果
         function typeWriterAni(e) {
             // console.log('NewText=',$(e.target).parent().parent().children().eq(3).children().eq());
@@ -1192,7 +1180,7 @@
                 $('.slider-dots li').eq(i).css('background','#F5E7D3').siblings().css('background','transparent')
 
             }
-            // ------------------------------s1往上滑效果----------------------------
+    // ------------------------------s1往上滑效果----------------------------
             // console.log('box offset', $('.s1-BoxRight-0').offset());
             // console.log('box offset top', $('.s1-BoxRight-0').offset().top);
             // console.log('box offset left', $('.s1-BoxRight-0').offset().left);
